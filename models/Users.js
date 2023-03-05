@@ -49,9 +49,7 @@ UserSchema.pre("save",async function(next) {
 })
 
 UserSchema.methods.getSignedJwtToken =function() {
-  return jwt.sign({id:this._id },process.env.JWT_SEC,{
-    expiresIn: process.env.JWT_EXPIRE
-  })
+  return jwt.sign({id:this._id },"122df56798gdtfZEF",{expiresIn: "10d"})
 }
 
 UserSchema.methods.matchPassword = async function(logedPassword) {

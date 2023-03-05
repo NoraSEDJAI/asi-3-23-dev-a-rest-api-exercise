@@ -13,7 +13,7 @@ exports.protect  = async(req,res,next) =>{
       return next(("access denied",401))
     }
 
-    const decrypted = jwt.verify(token,process.env.JWT_SEC)
+    const decrypted = jwt.verify(token,"122@=df56798gdtfZEF")
     req.user = await User.findById(decrypted.id)
     next()
   }

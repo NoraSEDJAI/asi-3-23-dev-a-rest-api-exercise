@@ -21,8 +21,3 @@ app.use("/api/v1/auth",auth)
 const PORT = 5000
 
 const server = app.listen(PORT)
-
-//process.on("unhandeldRejection",(err)=>{
-  //console.log(`error:${err.message}`.red)
-  //server.close(()=>process.exit(1))
-//})
